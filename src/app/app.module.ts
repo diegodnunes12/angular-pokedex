@@ -1,28 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { ListComponent } from './views/list/list.component';
 import { FormsModule } from '@angular/forms';
-import { ListItemComponent } from './components/list-item/list-item.component';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AppComponent } from './app.component';
 import { RollOnScrollDirective } from './directives/roll-on-scroll.directive';
-import { MyNumberPipe } from './pipes/my-number.pipe';
+import { AppRoutingModule } from './app-routing.module';
+import { InformationComponent } from './modules/pokedex/views/information/information.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent,
-    ListItemComponent,
     RollOnScrollDirective,
-    MyNumberPipe
+    InformationComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

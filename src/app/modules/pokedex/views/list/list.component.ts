@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PokeapiService } from '../../services/pokeapi.service';
+import { PokeapiService } from 'pokedata';
 
 @Component({
   selector: 'app-list',
@@ -8,7 +8,6 @@ import { PokeapiService } from '../../services/pokeapi.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-
   nameFilter = '';
   selectedPkm = null;
   get pokemonList(){
@@ -33,6 +32,5 @@ export class ListComponent implements OnInit {
   selectPokemon(pkm){
     this.selectedPkm = pkm;
   }
-
 
 }
